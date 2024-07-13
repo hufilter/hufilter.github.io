@@ -1,0 +1,49 @@
+---
+title: Szűrőlisták
+---
+
+import {
+  AdGuardLogo,
+  AdBlockUltimateLogo,
+  AdblockPlusLogo,
+  UBlockOriginLogo,
+  AdBlockLogo,
+  AdGuardHomeLogo,
+  RethinkDNSLogo,
+  PiHoleLogo,
+  BraveLogo,
+} from "@site/src/components/LogoProvider";
+
+# A hufilter által biztosított szűrőlisták
+
+:::info
+
+A hufilter számos lisáját a legnépszerűbb reklámblokkolók beépített nyelvi szűrőként támogatják, beleértve az AdGuardot,
+az uBlock Origin-t, a Brave-t, az AdBlockot, az Adblock Plust és az AdBlocker Ultimate-t.
+Bővebb információért lásd az alábbi táblázat utolsó sorát.
+
+:::
+
+## Szűrőlisták táblázata
+
+|                                    | [hufilter.txt](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter.txt&title=Hufilter%20Basic) | [hufilter-abp.txt](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-abp.txt&title=Hufilter%20for%20ABP) | [hufilter-ublock.txt](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-ublock.txt&title=Hufilter%20for%20uBO) | [hufilter-adguard.txt](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-adguard.txt&title=Hufilter%20for%20AdGuard) | [hufilter-selfpromo.txt](https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-selfpromo.txt&title=Hufilter%20Self-promotions) | [hufilter-dns.txt](https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-dns.txt) | [hufilter-pihole.txt](https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-pihole.txt) |
+| ---------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+| Hirdetések blokkolása | ✔️ | ✔️ | ✔️ | ✔️ | | 🟡 | 🟡 |
+| Nyomkövetők blokkolása | | ✔️ | ✔️ | ✔️ | | 🟡 | 🟡 |
+| Zavaró elemek blokkolása | | ✔️ | ✔️ | ✔️ | | | |
+| Adblock detekció blokkolása | | 🟡 | ✔️ | ✔️ | | | |
+| Fejlett szabályok | | 🟡 | ✔️ | ✔️ | | | |
+| Önpromóció blokkolása | | | | | ✔️ | | |
+| DNS szűrés | | | | | | ✔️ | ✔️ |
+| Kompatibilis vele[^1] | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <UBlockOriginLogo /> <BraveLogo /> | <AdGuardLogo /> <AdBlockUltimateLogo /> | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <AdGuardHomeLogo /> <RethinkDNSLogo /> | <PiHoleLogo /> |
+| Beépítetten tartalmazza[^2] | <AdblockPlusLogo /> <AdBlockLogo /> | | <UBlockOriginLogo /> <BraveLogo /> | <AdGuardLogo /> <AdBlockUltimateLogo /> | | <AdGuardHomeLogo /> <RethinkDNSLogo /> | |
+
+**Jelmagyarázat:**
+
+<ul style={{ listStyleType: "none" }}>
+  <li>🟡 Részben támogatott</li>
+  <li>✔️ Támogatott</li>
+</ul>
+
+[^1]: A megjelölt reklámblokkolók kompatibilisek az adott szűrőlistával.
+[^2]: A megjelölt reklámblokkolók beépítetten tartalmazzák az adott szűrőlistát.

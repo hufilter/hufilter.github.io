@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+---
+
+import {
+  ChromiumLogo,
+  FirefoxLogo,
+  AdGuardLogo,
+  UBlockOriginLogo,
+  AdBlockUltimateLogo,
+  AdblockPlusLogo,
+  AdBlockLogo,
+  FbContainerLogo,
+  BraveLogo,  
+} from "@site/src/components/LogoProvider"
+
+# Böngészőbővítmények
+
+A szűrés a böngészőn belül történik, és csak az adott böngészőben érvényes. Ezek a megoldások ingyenesek, megbízhatóan
+működnek, azonban függnek a böngészőtől, ezért ki vannak szolgáltatva annak a vállalatnak, amelyik az adott böngészőt
+fejleszti.
+Ez elsősorban a Google Chrome esetében probléma, hiszen a Manifest V3 alapjaiban fogja megváltoztatni a
+reklámblokkoló bővítmények működését 2024. júniusától
+([[forrás]](https://developer.chrome.com/blog/resuming-the-transition-to-mv3/#the-phase-out-timeline),
+[[forrás]](https://adguard.com/en/blog/chrome-manifest-v3-where-we-stand.html)).
+
+:::caution
+
+Ne használj több reklámblokkolót egyidejűleg (pl. AdGuard-ot uBlock-al)!
+A közhiedelemmel ellentétben nem adódik össze a hatásuk, hanem épp az ellenkezője történik:
+konfliktusba kerülhetnek egymással, ami bizonyos funkciók működését gátolhatja.
+Viszont nyugodtan kombinálhatsz egy hálózati szintű blokkolót (pl. AdGuard Home vagy Pi-hole) egy böngészőbeli
+blokkolóval (pl. AdGuard vagy uBlock Origin).
+
+:::
+
+Böngészőbővítmények listája (a teljesség igénye nélkül):
+
+<ul style={{ listStyleType: "none" }}>
+  <li><ChromiumLogo /> Chromium alapú böngészőkhöz (Google Chrome, Edge, Opera, Brave, stb.):</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=hu)</li>
+    <li><UBlockOriginLogo /> [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=hu)</li>
+    <li><AdBlockUltimateLogo /> [AdBlocker Ultimate](https://chrome.google.com/webstore/detail/adblocker-ultimate/ohahllgiabjaoigichmmfljhkcfikeof?hl=hu)</li>
+    <li><AdblockPlusLogo /> [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=hu)</li>
+    <li><AdBlockLogo /> [AdBlock](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom?hl=hu)</li>
+  </ul>
+  
+  <li><FirefoxLogo /> Firefoxhoz és Firefox alapú böngészőkhöz:</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard](https://addons.mozilla.org/hu/firefox/addon/adguard-adblocker/)</li>
+    <li><UBlockOriginLogo /> [uBlock Origin](https://addons.mozilla.org/hu/firefox/addon/ublock-origin/)</li>
+    <li><AdBlockUltimateLogo /> [AdBlocker Ultimate](https://addons.mozilla.org/hu/firefox/addon/adblocker-ultimate/)</li>
+    <li><AdblockPlusLogo /> [Adblock Plus](https://addons.mozilla.org/hu/firefox/addon/adblock-plus/)</li>
+    <li><AdBlockLogo /> [AdBlock](https://addons.mozilla.org/en-US/firefox/addon/adblock-for-firefox/)</li>
+    <li><FbContainerLogo /> [Facebook Container](https://addons.mozilla.org/hu/firefox/addon/facebook-container/) - a Mozilla által fejlesztett kiegészítő, amely elszigeteli a Facebookot a böngészőben, gátolva ezzel annak követési tevékenységét.</li>
+  </ul>
+</ul>
+
+:::tip
+
+Érdemes az alábbi böngészők valamelyikét használni, mivel tiszteletben tartják a felhasználók magánszféráját és
+a reklámblokkolást is teljes mértékben támogatják:
+
+<ul style={{ listStyleType: "none" }}>
+  <li><FirefoxLogo /> Firefox: https://www.mozilla.org/hu/</li>
+  <ul>
+    <li>A Firefox-os bővítményeket nem érinti a Manifest V3 változás, mivel ők továbbra is lehetővé teszik a
+      reklámblokkolók számára a korábbi működést.
+      [[forrás](https://adguard.com/en/blog/firefox-manifestv3-chrome-adblocking.html)]</li>
+  </ul>
+
+  <li><BraveLogo /> Brave: https://brave.com/</li>
+  <ul>
+    <li>A Brave gyárilag tartalmaz egy beépített reklámblokkolót, amire a Manifest V3 változás nem lesz hatással, mivel
+      nem egy kiegészítő, hanem a böngésző része.</li>
+  </ul>
+</ul>
+
+:::

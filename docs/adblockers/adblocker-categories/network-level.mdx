@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+---
+
+import {
+    AdGuardLogo,
+    AdGuardHomeLogo,
+    PiHoleLogo,
+    RethinkDNSLogo,
+} from "@site/src/components/LogoProvider"
+
+# Hálózati szintű blokkolók
+
+A szűrés hálózati szinten történik és hatással van minden eszközre, ami az adott hálózathoz kapcsolódik.
+**Fontos, hogy a hálózati szintű blokkolók nem helyettesítik az előző fejezetekben említett
+rendszerszintű / böngészőbővítmény reklámblokkolókat, hanem kiegészítik őket.**
+Hálózati szinten ugyanis csak "durva" szűrés lehetséges, vagyis letilthatók különféle szerverek, azonban attól,
+hogy letiltod a hirdető szerverét, a weboldalon még ott fog maradni a hirdetés üresen maradt helye, ami esztétikai hiba;
+illetve az oldal azt is érzékelni tudja, hogy a hirdetés nem töltődött le,
+és akár a reklámblokkoló kikapcsolására is kérhet.
+
+Ezen problémákat csak finom, kozmetikai jellegű szűréssel lehet megoldani, tehát az eszközökre - amennyiben lehetséges -
+telepíteni kell a rendszerszintű vagy a böngészőbővítmény verziókat is,
+amelyek el tudják végezni ezeket az aprólékos szűréseket is.
+
+Hálózati szintű blokkolók listája (a teljesség igénye nélkül):
+
+<ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard DNS](https://adguard-dns.io/hu/welcome.html)</li>
+    <li><AdGuardHomeLogo /> [AdGuard Home](https://adguard.com/hu/adguard-home/overview.html)</li>
+    <li><PiHoleLogo /> [Pi-hole](https://pi-hole.net/)</li>
+    <li><RethinkDNSLogo /> [RethinkDNS](https://rethinkdns.com/)</li>
+</ul>

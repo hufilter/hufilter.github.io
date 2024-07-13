@@ -1,0 +1,58 @@
+---
+sidebar_position: 1
+---
+
+import {
+  WindowsLogo,
+  AndroidLogo,
+  AppleLogo,
+  AdGuardLogo,
+  AdBlockUltimateLogo,
+  BlokadaLogo,
+  AdblockIosLogo,
+} from "@site/src/components/LogoProvider"
+
+# Operációs rendszer szintű blokkolók
+
+A szűrés az operációs rendszer szintjén történik, és hatással van minden programra, ami az adott operációs rendszeren
+fut. Ezek a megoldások helyettesítik a böngészőkbe telepíthető verziókat, így nem kell minden böngészőhöz külön-külön
+telepíteni reklámblokkolót. A rendszerszintű blokkolók általában fizetősek, de a legtöbbnek van ingyenes próbaverziója
+is, amely időszak alatt el lehet dönteni, hogy megéri-e számodra a fizetős verzió.
+
+Rendszerszintű blokkolók listája (a teljesség igénye nélkül):
+
+<ul style={{ listStyleType: "none" }}>
+  <li><WindowsLogo /> Windows:</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> <a href="https://adguard.com/hu/adguard-windows/overview.html">AdGuard for Windows</a></li>
+    <li><AdBlockUltimateLogo /> <a href="https://adblockultimate.net/windows">AdBlocker Ultimate</a></li>
+  </ul>
+  
+  <li><AndroidLogo /> Android:</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> <a href="https://adguard.com/hu/adguard-android/overview.html">AdGuard for Android</a></li>
+    <li><BlokadaLogo /> <a href="https://blokada.org/">Blokada</a></li>
+  </ul>
+
+  <li><AppleLogo /> Mac:</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> <a href="https://adguard.com/hu/adguard-mac/overview.html">AdGuard for Mac</a></li>
+  </ul>
+
+  <li><AppleLogo /> iPhone (iOS):</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> <a href="https://adguard.com/hu/adguard-ios/overview.html">AdGuard for iOS</a></li>
+    <li><AdblockIosLogo /> <a href="https://apps.apple.com/hu/app/adblock/id691121579?l=hu">AdBlock for iOS</a></li>
+  </ul>
+</ul>
+
+:::tip
+A rendszerszintű blokkolók extra funkciókat is kínálnak, amelyekkel tovább növelhető a biztonság, pl. a DNS
+kiszolgáló cseréje, tűzfal funkció, stb.
+:::
+
+:::note
+Elképzelhető, hogy bizonyos alkalmazásokat nem tudnak érdemben szűrni a rendszerszintű blokkolók, pl. ilyen Androidon
+a YouTube alkalmazás. Ennek okáról és a megoldásról bővebben olvashatsz a
+[Reklámmentes YouTube Androidon](../mobile-devices.mdx#reklámmentes-youtube-androidon) fejezetben.
+:::

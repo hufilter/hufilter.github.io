@@ -1,0 +1,65 @@
+---
+sidebar_position: 3
+---
+
+# Reklámblokkolás mobil eszközökön
+
+Mobil eszközökön (telefon, tablet) a reklámblokkolás megvalósítása nem olyan egyszerű, mint az asztali számítógépeken.
+Íme néhány hasznos tipp, amivel megkönnyítheted a reklámblokkolást mobil eszközökön:
+
+## Tippek a reklámblokkoláshoz mobil eszközökön
+
+- Lehetőség szerint használj hálózati- és operációs rendszer szintű blokkolást.
+- Használj Firefox-ot, ami támogatja a bővítményeket, így az előző fejezetben felsorolt kiegészítők telepíthetők hozzá.
+- Használj olyan böngészőt, ami alapból blokkolja a reklámokat, pl. Brave, Opera.
+- Használj olyan böngészőt, amihez telepíthető tartalomblokkoló (content blocker), pl. Edge, Samsung Internet. A
+  tartalomblokkolók nem olyan hatékonyak, mint a teljes értékű reklámblokkolók.
+- A gyári alkalmazások helyett használj olyan alternatívákat, amelyek nem tartalmaznak reklámokat, pl. YouTube helyett
+  [NewPipe](https://newpipe.net/).
+- Root-olás által tegyél lehetővé olyan funkciókat, amelyeket a gyártók nem engedélyeznek, pl. a rendszerszintű
+  tanúsítványok telepítése, gyári alkalmazások eltávolítása, stb. A root-olás azonban csak haladó felhasználóknak
+  ajánlott, mivel a gyártói garancia elvesztésével járhat, és a biztonságot is csökkentheti.
+
+## Reklámmentes YouTube Androidon
+
+Mobilok esetében a rendszerszintű reklámblokkoló használata nem mindig elegendő, hiszen a reklámok letiltása nem
+lehetséges minden alkalmazásban, jellemzően ilyen a YouTube is. Ennek az az oka, hogy a YouTube titkosított
+(HTTPS, azaz `https://`) csatornán keresztül kommunikál, és a hirdetéseket is ezen keresztül tölti le. Ez a titkosított
+kommunikáció csak egy tanúsítvány telepítésével válna láthatóvá a rendszerszintű blokkoló számára, azonban a Google
+Android 7-től bevezette a "rendszerszintű" és a "felhasználói szintű" tanúsítványokat. Ezért hiába telepíti a
+rendszerszintű blokkoló a felhasználói szintű tanúsítványt, nem fog belelátni a YouTube forgalmazásába, hogy kiszűrje a
+hirdetéseket, hiszen a YouTube alkalmazás úgy van beállítva, hogy csak a rendszerszintű tanúsítványokban bízzon meg.
+[[forrás](https://adguard.com/en/blog/android-nougat-release-and-what-does-it-mean-for-adguard-users.html)]
+
+Ennek ellenére van néhány egyszerű megoldás, amivel reklámmentessé tehető a YouTube Androidon:
+
+1. A YouTube megnyitása olyan böngészőben, ami képes a reklámok blokkolására, pl. Firefox, Brave, Opera, stb.
+1. A gyári YouTube alkalmazás lecserélése olyan alkalmazásra, ami nem tartalmaz reklámokat. Ehhez az alábbi megoldások
+   állnak rendelkezésre Androidon:
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/NewPipelogo.svg" width="14px" /> [NewPipe](https://newpipe.net/)
+     - Nyílt forráskódú YouTube kliens, amely nem használ semmilyen Google API-t/szolgáltatást, vagyis tiszteletben
+       tartja a felhasználók magánszféráját.
+     - Mivel egy teljesen külön alkalmazásról van szó, ami nem kapcsolódik a Google szolgáltatásaihoz, ezért a YouTube
+       alkalmazás funkcióinak egy része nem elérhető, pl. a bejelentkezés, a kommentelés, a feliratkozás, a videók
+       kedvelése, stb. Ellenben van lehetőség a videók letöltésére, a háttérben való lejátszásra, stb.
+   - <img src="https://raw.githubusercontent.com/ReVanced/.github/main/profile/assets/revanced-logo/revanced-logo-round.svg" width="14px" /> [ReVanced](https://github.com/ReVanced/revanced-manager/releases)
+     - A YouTube Vanced megszűnése után létrejött nyílt forráskódú projekt, ami ún. patch-ek segítségével tudja módosítani a YouTube és más appok telepítőfájljait (APK-it)
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Youtubevanced.png" width="14px" /> [Vanced](https://github.com/YTVanced/VancedManager/releases)
+     - Az eredeti YouTube alkalmazás módosított változata
+     - :warning: 2022 márciusában a Google nyomására **megszűnt** a projekt fejlesztése
+       [[forrás](https://www.theverge.com/2022/3/13/22975890/youtube-vanced-app-discontinued-shutting-down-legal-reasons)]
+
+:::caution
+
+A ReVanced-et **CSAK** a hivatalos, https://github.com/ReVanced vagy a https://revanced.app/download oldalakól töltsd le
+és magadnak készítsd el a patch-eket a ReVanced Manager segítségével.
+A Manager-nek szüksége lesz egy gyári APK fájlra amit patch-elhet, ezt a
+https://www.apkmirror.com/apk/google-inc/youtube/ oldalról szerezheted be.
+Számos oldal kínálja egyszerűen letölthető APK fájlként a ReVanced-et, de ezek nem hivatalos források, és könnyen
+előfordulhat, hogy az ilyen fájlokban kártékony kódok vannak elrejtve.
+
+:::
+
+## Reklámmentes YouTube TV-n
+
+Bizonyos TV-készülékeken (Android TV, Amazon Fire TV) működhet a [SmartTube](https://github.com/yuliskov/SmartTube).

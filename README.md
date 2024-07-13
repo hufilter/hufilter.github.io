@@ -1,42 +1,41 @@
-# Hufilter website
+# Website
 
-## 🚀 Project Structure
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Inside of your Astro project, you'll see the following folders and files:
+### Installation
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+$ pnpm i
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Local Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+$ pnpm start
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## 🧞 Commands
+### Build
 
-All commands are run from the root of the project, from a terminal:
+```
+$ pnpm build
+```
 
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build your production site to `./dist/`          |
-| `pnpm run preview`         | Preview your build locally, before deploying     |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## 👀 Want to learn more?
+### Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Using SSH:
+
+```
+$ USE_SSH=true pnpm deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> pnpm deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

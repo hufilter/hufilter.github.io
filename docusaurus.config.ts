@@ -117,7 +117,7 @@ const config: Config = {
             },
             {
               label: 'Közreműködők',
-              href: 'https://github.com/hufilter/hufilter-dev/graphs/contributors',
+              to: '/contributors',
             }
           ],
         },

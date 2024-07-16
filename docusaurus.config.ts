@@ -132,6 +132,10 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/hufilter/hufilter',
             },
+            {
+              label: 'Jogi nyilatkozat',
+              to: '/legal',
+            }
           ],
         },
       ],

@@ -68,6 +68,11 @@ const config: Config = {
           label: 'Reklámblokkoló gyorstalpaló',
           position: 'left',
         },
+        {
+          to: 'filtering-policy',
+          label: 'Szűrési irányelvek',
+          position: 'left',
+        },
         // TODO: Consider a dropdown or something for the Wiki
         // {
         //   type: 'docSidebar',

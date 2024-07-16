@@ -1,0 +1,38 @@
+# Szűrési irányelvek
+
+A szűrőszabályokat beküldők az itt leírtakat elfogadják és egyetértenek vele.
+
+A hufilter alapvetően az EasyList-et és az AdGuard Base List-et egészíti ki, a magyar nyelvű tartalmak szűrésével.
+
+A szűrés nem korlátozódik kizárólag csak reklámokra, más tartalmi elemeket is módosíthat.
+
+Amit szűrünk:
+
+- Reklámokat, videóhirdetéseket, reklámok újra beszúrásának kísérleteit
+- Nyomkövetőket / analitikai szkripteket, egyéb magánélet védelmi szempontból aggályos elemeket
+- Zavaró elemeket (pl. cookie értesítések, beúszó ajánlók, agresszív popupok / popunderek, stb.)
+- Súlyos biztonsági kockázatot jelentő elemeket / oldalakat (pl. phishing oldalak, malware terjesztő oldalak, stb.)
+- Reklámblokkoló kikapcsolására kérő elemek (viszont amennyiben ezek nem zavaróak és nem akadályozzák az oldal használatát, akkor nem szűrjük őket)
+- "Ad leftover"-eket (ha egy reklámot blokkolt pl. az EasyList, de a reklám helye üresen maradt vagy maradt utána egy "Hirdetés" felirat, akkor ezt elrejtjük)
+- Context menu blokkolókat (ha egy oldal blokkolja a jobb klikkel előhívható menüt)
+- Az önpromóciókat (pl. "támogass minket" / "adományozz" elemek, vagy a saját szolgáltatások reklámozása) _csak_ abban az esetben szűrjük, ha azok agresszívek / tolakodóak
+- "Breakage"-eket (ha egy oldal tartalma megtörik valamelyik szűrő miatt)
+
+Amit NEM szűrünk:
+
+- Korhatáros tartalmakra figyelmeztető elemeket (pl. ha egy oldal megjelenít egy figyelmeztetést, hogy a tartalom 18+, ezt
+értelemszerűen akkor sem szűrjük, ha a figyelmeztetés blokkolja a tartalmat)
+- Paywall-eket (fizetős tartalmakhoz való hozzáférés blokkolását)
+- Bejelentkezést igénylő / meghívásos oldalakat. Az indok egyszerű: nincs gyors és egyszerű mód a beküldött szabályok ellenőrzésére. Kivételt képezhethek a kiemelten népszerű oldalak, amennyiben lehetséges regisztrálni meghívás nélkül is.
+A meghívásos oldalakat egyáltalán nem szűrjük.
+- Nemzetközi social media oldalakat, pl. Youtube, Twitter, Facebook (beleértve ezek gombjait és widgetjeit más külső oldalakon). Ha ezeket szeretnéd szűrni, akkor több listára is fel lehet iratkozni.
+
+A listának nem célja, hogy mindent, minden áron szűrjön, az "élni és élni hagyni" elv szellemében szerkesztjük.
+
+A hufilter karbantartói csapat fenntartja hogy bármely beküldést vagy kérést elfogadjon vagy elutasíton, akár indoklás nélkül is. 
+A szűrési irányelvek nem kőbe vésett szabályok, hanem inkább egy általános tájékoztató a főbb mögöttes elvekről - szélsőséges esetben akár olyan szűrőszabály is bekerülhet, ami nem indokolható az irányelvekkel vagy ellenkezik velük.
+Ez egy kicsit nyersen hangozhat, de fontos hogy ebben a kérdésben mindenki tisztán lássa a hufilter karbantartói csapat álláspontját és megelőzzük az esetleges későbbi félreértéseket. 
+
+A szabályok megírása során törekszünk arra, hogy azok minél inkább specifikusak legyenek, és ne okozzanak mellékhatásokat. Azonban előfordulhat, hogy egy-egy szabály nem működik tökéletesen, vagy mellékhatásokat okoz. Ilyen esetekben kérjük, hogy jelezd a hibát a hufilter karbantartói csapatnak.
+
+A hufilternek nem célja semelyik oldal működésének tönkretétele vagy ellehetetlenítése.

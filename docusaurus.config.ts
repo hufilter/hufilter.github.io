@@ -44,7 +44,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    announcementBar: {
+      id: 'notice',
+      content:
+        'A hufilter.hu tartalma kialakítás alatt van. Az oldal jelenleg tesztüzemben működik.',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: true,
+    },
     image: 'img/social-card.png',
     navbar: {
       title: 'hufilter',

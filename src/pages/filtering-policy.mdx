@@ -2,32 +2,46 @@
 
 A szűrőszabályokat beküldők az itt leírtakat elfogadják és egyetértenek vele.
 
-A hufilter alapvetően az EasyList-et és az AdGuard Base List-et egészíti ki, a magyar nyelvű tartalmak szűrésével.
+A hufilter az EasyList-et és az AdGuard Base List-et egészíti ki, a magyar nyelvű tartalmak szűrésével.
+A hufilter szabályai alapvetően szubjektíven, saját megérzés alapján vannak összeállítva.
+A listának nem célja, hogy mindent, minden áron szűrjön, az "élni és élni hagyni" elv szellemében szerkesztjük.
 
 A szűrés nem korlátozódik kizárólag csak reklámokra, más tartalmi elemeket is módosíthat.
 
-Amit szűrünk:
+## Amit szűrünk
 
 - Reklámokat, videóhirdetéseket, reklámok újra beszúrásának kísérleteit
 - Nyomkövetőket / analitikai szkripteket, egyéb magánélet védelmi szempontból aggályos elemeket
 - Zavaró elemeket (pl. cookie értesítések, beúszó ajánlók, agresszív popupok / popunderek, stb.)
 - Súlyos biztonsági kockázatot jelentő elemeket / oldalakat (pl. phishing oldalak, malware terjesztő oldalak, stb.)
-- Reklámblokkoló kikapcsolására kérő elemek (viszont amennyiben ezek nem zavaróak és nem akadályozzák az oldal használatát, akkor nem szűrjük őket)
+- Reklámblokkoló kikapcsolására kérő elemeket (viszont amennyiben ezek nem zavaróak és nem akadályozzák az oldal használatát, akkor nem szűrjük őket)
 - "Ad leftover"-eket (ha egy reklámot blokkolt pl. az EasyList, de a reklám helye üresen maradt vagy maradt utána egy "Hirdetés" felirat, akkor ezt elrejtjük)
 - Context menu blokkolókat (ha egy oldal blokkolja a jobb klikkel előhívható menüt)
-- Az önpromóciókat (pl. "támogass minket" / "adományozz" elemek, vagy a saját szolgáltatások reklámozása) _csak_ abban az esetben szűrjük, ha azok agresszívek / tolakodóak
+- Az önpromóciókat _csak_ abban az esetben szűrjük, ha azok agresszívek / tolakodóak / zavaróak (pl. "támogass minket" / "adományozz" elemek, vagy a saját szolgáltatások reklámozása)
 - "Breakage"-eket (ha egy oldal tartalma megtörik valamelyik szűrő miatt)
 
-Amit NEM szűrünk:
+:::note
 
-- Korhatáros tartalmakra figyelmeztető elemeket (pl. ha egy oldal megjelenít egy figyelmeztetést, hogy a tartalom 18+, ezt
-értelemszerűen akkor sem szűrjük, ha a figyelmeztetés blokkolja a tartalmat)
+Az, hogy egy elem mikortól "zavaró" / "agresszív" / "tolakodó", szubjektív kérdés,
+de többnyire az alábbi szempontok alapján döntünk:
+
+- Ha blokkolja a görgetést vagy az oldal használatát
+- Blokkolja a tartalom megtekintését vagy annak túl nagy részét takarja el
+- Túl gyakori az elem megjelenése
+- Nem lehet könnyen átugrani / figyelmen kívül hagyni az elemet
+- Hangot / videót játszik le automatikusan
+
+:::
+
+## Amit nem szűrünk
+
+- Korhatáros tartalmakra figyelmeztető elemeket (pl. ha egy oldal megjelenít bármilyen figyelmeztetést, hogy a tartalom 18+)
 - Paywall-eket (fizetős tartalmakhoz való hozzáférés blokkolását)
 - Bejelentkezést igénylő / meghívásos oldalakat. Az indok egyszerű: nincs gyors és egyszerű mód a beküldött szabályok ellenőrzésére. Kivételt képezhethek a kiemelten népszerű oldalak, amennyiben lehetséges regisztrálni meghívás nélkül is.
 A meghívásos oldalakat egyáltalán nem szűrjük.
 - Nemzetközi social media oldalakat, pl. Youtube, Twitter, Facebook (beleértve ezek gombjait és widgetjeit más külső oldalakon). Ha ezeket szeretnéd szűrni, akkor több listára is fel lehet iratkozni.
 
-A listának nem célja, hogy mindent, minden áron szűrjön, az "élni és élni hagyni" elv szellemében szerkesztjük.
+## Egyéb
 
 A hufilter karbantartói csapat fenntartja hogy bármely beküldést vagy kérést elfogadjon vagy elutasíton, akár indoklás nélkül is. 
 A szűrési irányelvek nem kőbe vésett szabályok, hanem inkább egy általános tájékoztató a főbb mögöttes elvekről - szélsőséges esetben akár olyan szűrőszabály is bekerülhet, ami nem indokolható az irányelvekkel vagy ellenkezik velük.
@@ -36,3 +50,5 @@ Ez egy kicsit nyersen hangozhat, de fontos hogy ebben a kérdésben mindenki tis
 A szabályok megírása során törekszünk arra, hogy azok minél inkább specifikusak legyenek, és ne okozzanak mellékhatásokat. Azonban előfordulhat, hogy egy-egy szabály nem működik tökéletesen, vagy mellékhatásokat okoz. Ilyen esetekben kérjük, hogy jelezd a hibát a hufilter karbantartói csapatnak.
 
 A hufilternek nem célja semelyik oldal működésének tönkretétele vagy ellehetetlenítése.
+
+A szerkesztők és közreműködők törvénytisztelő állampolgárok, munkájukat a legnagyobb körültekintéssel végzik abban a tekintetben, hogy az ne sértsen semmilyen hatályos törvényt vagy jogszabályt, és ilyen kérdésekben nyitottak a békés vitarendezésre. Esetleges jogi észrevételt a karbantartói elérhetőségeken vagy a Github-on lehet jelezni, a sérteni vélt joghely pontos megjelölésével (tehát konkrétan megadni hogy mely tevékenység milyen módon vélhető hogy pontosan melyik törvény vagy jogszabály melyik részét sérti). Minden ilyen bejelentés megvizsgálásra és publikálásra kerül, és törvénysértő magatartás esetén a karbantartók teljes mértékben elkötelezettek a jogszerű helyzet és viselkedés mielőbbi és teljes körű visszaállítására.

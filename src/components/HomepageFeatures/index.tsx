@@ -1,17 +1,19 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear, faRocket, faUsers, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: IconDefinition,
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Széles körű támogatás',
-    Svg: require('@site/static/img/security-svgrepo-com.svg').default,
+    icon: faRocket,
     description: (
       <>
         A hufiltert számos széles körben használt reklámblokkoló támogatja, beleértve az AdGuardot,
@@ -21,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Nyílt forráskódú',
-    Svg: require('@site/static/img/handshake-deal-svgrepo-com.svg').default,
+    icon: faUsers,
     description: (
       <>
         A hufilter egy nonprofit, nyílt forráskódú projekt, amelynek fejlesztésében bárki
@@ -31,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Testreszabható szűrés',
-    Svg: require('@site/static/img/settings-gear-svgrepo-com.svg').default,
+    icon: faGear,
     description: (
       <>
         A hufilter számos szűrőlistát kínál, amelyek segítségével testreszabhatod a böngészési
@@ -41,11 +43,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <FontAwesomeIcon icon={icon} className={clsx('text-5xl lg:text-7xl mb-4', styles.featureIcon)} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

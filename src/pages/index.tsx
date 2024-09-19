@@ -11,8 +11,12 @@ import { AdBlockLogo, AdblockPlusLogo, AdBlockUltimateLogo, AdGuardLogo, BraveLo
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+    <header className={clsx(
+      'hero hero--primary dark:bg-teal-950 dark:text-gray-200 relative',
+      styles.heroBanner,
+    )}>
+      <div className={clsx('absolute inset-0 h-full w-full bg-[url(/img/hero-bg.png)] bg-cover lg:bg-contain lg:bg-repeat opacity-50')}></div>
+      <div className="container z-10">
         <img src="/img/logo.svg" alt="Hufilter Logo" width="150" />
 
         <Heading as="h1" className="hero__title">

@@ -15,7 +15,7 @@ function HomepageHeader() {
       'hero hero--primary dark:bg-teal-950 dark:text-gray-200 relative',
       styles.heroBanner,
     )}>
-      <div className={clsx('absolute inset-0 h-full w-full bg-[url(/img/hero-bg.png)] bg-cover lg:bg-contain lg:bg-repeat opacity-50')}></div>
+      <div className={clsx('absolute inset-0 h-full w-full bg-[url(/img/hero-bg.png)] bg-center bg-cover lg:bg-contain lg:bg-repeat opacity-50')}></div>
       <div className="container z-10">
         <img src="/img/logo.svg" alt="Hufilter Logo" width="150" />
 

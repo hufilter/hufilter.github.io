@@ -13,7 +13,11 @@ const config: Config = {
   trailingSlash: false,
   projectName: 'hufilter',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   // TODO: Add English translation
   i18n: {
     defaultLocale: 'hu',

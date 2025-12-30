@@ -2,62 +2,62 @@
 title: Szűrőlisták
 ---
 
-import {
-  AdGuardLogo,
-  AdBlockUltimateLogo,
-  AdblockPlusLogo,
-  UBlockOriginLogo,
-  AdBlockLogo,
-  AdGuardHomeLogo,
-  RethinkDNSLogo,
-  PiHoleLogo,
-  BraveLogo,
-} from "@site/src/components/LogoProvider";
-
 # A hufilter által biztosított szűrőlisták
 
-:::info
+## Szűrőlisták áttekintése
 
-A hufilter számos lisáját a legnépszerűbb reklámblokkolók beépített nyelvi szűrőként támogatják, beleértve az AdGuardot,
-az uBlock Origin-t, a Brave-t, az AdBlockot, az Adblock Plust és az AdBlocker Ultimate-t, vagyis nagy valószínűséggel
-a te reklámblokkolód is támogatja a hufilter szűrőlistáit és nincs szükséged az alapszűrőlisták kézi hozzáadására.
-Bővebb információért lásd az alábbi táblázat utolsó sorát.
+A hufilter két fő kategóriához biztosít listákat: teljes szintű és hálózati szintű blokkoláshoz.
+A teljes szintű blokkolás nemcsak a hálózati kéréseket akadályozza meg (például a reklámok letöltését),
+hanem a weboldal megjelenését és működését is módosíthatja: eltünteti az üresen maradt hirdetési helyeket,
+elrejti a zavaró elemeket, és megakadályozhatja bizonyos scriptek futását is.
+Ezzel szemben a hálózati szintű blokkolás csak a szerverek szintjén szűr,
+így a hirdetési vagy követő domainek el sem érik az eszközt,
+viszont a weboldalon megmaradhatnak az üres helyek vagy az oldal észlelheti a blokkolást.
+Amennyiben lehetőség van rá, érdemes a teljes szintű listákat használni.
+
+Bővebb információkért tekintsd át a [reklámblokkolókat bemutató oldalunkat](../../docs/adblockers/about-adblockers).
+
+### Teljes szintű blokkoláshoz
+
+:::note
+
+A hufilter számos lisáját a legnépszerűbb reklámblokkolók beépített nyelvi szűrőként támogatják, ezeket feltüntettük a táblázatban.
 
 :::
 
-## Szűrőlisták összehasonlítása
+| Formátum | Link | Blokkolt elemek | Kompatibilis programok |
+| --- | --- | --- | --- |
+| Adblock Plus | [hufilter.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter.txt) | hirdetések | Adblock Plus (beépített szűrő), AdBlock (beépített szűrő), AdGuard, uBlock Origin, Brave, AdBlock Ultimate |
+| Adblock Plus | [hufilter-abp.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-abp.txt) | hirdetések, nyomkövetők, zavaró elemek, adblock detekció (limitált), kártevők | Adblock Plus, AdBlock |
+| uBlock Origin | [hufilter-ublock.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-ublock.txt) | hirdetések, nyomkövetők, zavaró elemek, adblock detekció, kártevők | uBlock Origin (beépített szűrő), Brave (beépített szűrő) |
+| AdGuard | [hufilter-adguard.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt) | hirdetések, nyomkövetők, zavaró elemek, adblock detekció, kártevők | AdGuard (beépített szűrő), AdBlock Ultimate (beépített szűrő) |
+| Adblock Plus | [hufilter-selfpromo.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-selfpromo.txt) | önpromóciók | Adblock Plus, AdBlock, AdGuard, uBlock Origin, Brave, AdBlock Ultimate |
 
-Az egyes szűrőlisták funkcióit az alábbi táblázatban összehasonlítottuk.
-A szűrő nevére kattintva fel tudsz iratkozni rá, amennyiben rendelkezel olyan reklámblokkolóval, amely ezt támogatja.
+### Hálózati szintű blokkoláshoz
 
-|                                    | [hufilter.txt](https://subscribe.adblockplus.org/?location=https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter.txt&title=Hufilter%20Basic) | [hufilter-abp.txt](https://subscribe.adblockplus.org/?location=https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-abp.txt&title=Hufilter%20for%20ABP) | [hufilter-ublock.txt](https://subscribe.adblockplus.org/?location=https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-ublock.txt&title=Hufilter%20for%20uBO) | [hufilter-adguard.txt](https://subscribe.adblockplus.org/?location=https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt&title=Hufilter%20for%20AdGuard) | [hufilter-selfpromo.txt](https://subscribe.adblockplus.org/?location=https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-selfpromo.txt&title=Hufilter%20Self-promotions) | [hufilter-dns.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns.txt) | [hufilter-hosts.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-hosts.txt) |
-| ---------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
-| Hirdetések blokkolása | ✔️ | ✔️ | ✔️ | ✔️ | | 🟡 | 🟡 |
-| Nyomkövetők blokkolása | | ✔️ | ✔️ | ✔️ | | 🟡 | 🟡 |
-| Zavaró elemek blokkolása | | ✔️ | ✔️ | ✔️ | | | |
-| Adblock detekció blokkolása | | 🟡 | ✔️ | ✔️ | | | |
-| Fejlett szabályok [^1] | | 🟡 | ✔️ | ✔️ | | | |
-| Önpromóció blokkolása | | | | | ✔️ | | |
-| DNS szűrés | | | | | | ✔️ | ✔️ |
-| Kompatibilis vele [^2] | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <UBlockOriginLogo /> <BraveLogo /> | <AdGuardLogo /> <AdBlockUltimateLogo /> | <AdblockPlusLogo /> <AdBlockLogo /> <AdGuardLogo /> <UBlockOriginLogo /> <BraveLogo /> <AdBlockUltimateLogo /> | <AdGuardHomeLogo /> <RethinkDNSLogo /> | <AdGuardHomeLogo /> <PiHoleLogo /> |
-| Beépítetten tartalmazza [^3] | <AdblockPlusLogo /> <AdBlockLogo /> | | <UBlockOriginLogo /> <BraveLogo /> | <AdGuardLogo /> <AdBlockUltimateLogo /> | | <AdGuardHomeLogo /> <RethinkDNSLogo /> | |
+:::note
 
-**Jelmagyarázat:**
+A hálózati szintű listákat automatikusan generáljuk a teljes szintű listák alapján.
 
-<ul style={{ listStyleType: "none" }}>
-  <li>🟡 Részben támogatott</li>
-  <li>✔️ Támogatott</li>
-</ul>
+Ha a felsoroltaktól eltérő formátumra van szükséged, nyiss egy GitHub issue-t, ismetesd a részleteket,
+és megfontoljuk a lista hozzáadását.
+
+:::
+
+| Formátum | Link | Blokkolt elemek | Kompatibilis programok |
+| --- | --- | --- | --- |
+| Domain lista | [hufilter-dns.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns.txt) (alias: [hufilter-pihole.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-pihole.txt)) | hirdetések, nyomkövetők, zavaró elemek, kártevők | Pi-hole, Blocky (v0.23-nál régebbi), Diversion (v5-nél régebbi), OpenSnitch, PersonalBlocklist, pfBlockerNG, stb. |
+| Hosts fájl | [hufilter-hosts.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-hosts.txt) | hirdetések, nyomkövetők, zavaró elemek, kártevők | AdAway, uMatrix, DNS66, NetGuard, Hostfile, Linux, stb. |
+| Adblock stílusú domain lista | [hufilter-dns-adblock.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns-adblock.txt) | hirdetések, nyomkövetők, zavaró elemek, kártevők | AdGuard, AdGuard Home, eBlocker, Adblock Plus, AdBlock, uBlock Origin, Brave (csak agresszív módban), AdBlock Ultimate, AdNauseam, Little Snitch Mini, stb. |
+| DNSMasq | [hufilter-dnsmasq.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dnsmasq.txt) | hirdetések, nyomkövetők, zavaró elemek, kártevők | DNSMasq (v2.86 vagy újabb), adblock-lean, Diversion (v5 vagy újabb), stb. |
 
 ## Szűrőlisták elérhetősége
 
-:::info
-
 Amikor a hufilterbe új szabály kerül
 (tehát [érkezik egy commit a `hufilter/hufilter` repository-ba](https://github.com/hufilter/hufilter/commits/master/)),
-a frissített szűrőlisták automatikusan pusholódnak a
+a frissített szűrőlisták automatikusan felkerülnek a
 [`hufilter/hufilter` GitHub repository `gh-pages` branch-ére](https://github.com/hufilter/hufilter/tree/gh-pages),
-ahonnan pedig felkerülnek a GitHub Pages-re.
+onnan pedig a GitHub Pages-re.
 Ezen folyamat jellegéből adódóan a listák egyidejűleg több linken keresztül is elérhetőek.
 
 A félreértések elkerülése végett, az alább felsorolt linkek **mind ugyanazt a tartalmat szolgálják ki**,
@@ -69,9 +69,7 @@ Egyelőre azonban a jsDelivr linkek a lista "hivatalos" linkei, így azok haszn�
 jelenleg azokat tekintjük a legstabilabbnak.
 A jövőre vonatkozóan tervben van, hogy a `filters.hufilter.hu` linkeket fogjuk ajánlani elsődleges linkként,
 azonban ha ez meg is történik, az nem fogja befolyásolni a másik két link működését,
-a lista publikálásának módja miatt mindhárom link mindig elérhető marad és nem fognak változni.
-
-:::
+**a lista publikálásának módja miatt mindhárom link mindig elérhető marad és nem fognak változni.**
 
 :::note
 
@@ -85,14 +83,7 @@ https://github.com/hufilter/hufilter/issues/461
 
 Link formátuma: `https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/<fájlnév>`
 
-Szűrőlisták:
-- `hufilter.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter.txt
-- `hufilter-abp.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-abp.txt
-- `hufilter-ublock.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-ublock.txt
-- `hufilter-adguard.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt
-- `hufilter-selfpromo.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-selfpromo.txt
-- `hufilter-dns.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns.txt
-- `hufilter-hosts.txt`: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-hosts.txt
+Index oldal: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/
 
 ### hufilter.hu
 
@@ -100,28 +91,6 @@ Link formátuma: `https://filters.hufilter.hu/<fájlnév>`
 
 Index oldal: https://filters.hufilter.hu/
 
-Szűrőlisták:
-
-- `hufilter.txt`: https://filters.hufilter.hu/hufilter.txt
-- `hufilter-abp.txt`: https://filters.hufilter.hu/hufilter-abp.txt
-- `hufilter-ublock.txt`: https://filters.hufilter.hu/hufilter-ublock.txt
-- `hufilter-adguard.txt`: https://filters.hufilter.hu/hufilter-adguard.txt
-- `hufilter-selfpromo.txt`: https://filters.hufilter.hu/hufilter-selfpromo.txt
-- `hufilter-dns.txt`: https://filters.hufilter.hu/hufilter-dns.txt
-- `hufilter-hosts.txt`: https://filters.hufilter.hu/hufilter-hosts.txt
-
 ### GitHub
 
 Link formátuma: `https://raw.githubusercontent.com/hufilter/hufilter/refs/heads/gh-pages/<fájlnév>`
-
-:::warning
-
-Ezen link helyett az előző két link használata ajánlott.
-
-:::
-
-[^1]: A fejlett szabályok közé tartozik például a CSS injection és a scriptlet-ek használata.
-Közérthetőbben, ezek a szabályok például segítenek hatékonyan blokkolni az olyan mechanizmusokat, amik a reklámblokkoló
-kikapcsolására próbálnak rávenni, illetve hatékonyabbá teszik az adatvédelmet.
-[^2]: A megjelölt reklámblokkolók kompatibilisek az adott szűrőlistával.
-[^3]: A megjelölt reklámblokkolók beépítetten tartalmazzák az adott szűrőlistát.

@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Reklámblokkoló gyorstalpaló": {
+    "message": "Ad Blocker Guide",
+    "description": "The label for category 'Reklámblokkoló gyorstalpaló' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Reklámblokkolók típusai": {
+    "message": "Ad Blocker Categories",
+    "description": "The label for category 'Reklámblokkolók típusai' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Ad Blocker Categories": {
+    "message": "Ad Blocker Categories",
+    "description": "The label for category 'Ad Blocker Categories' in sidebar 'tutorialSidebar'"
+  }
+}

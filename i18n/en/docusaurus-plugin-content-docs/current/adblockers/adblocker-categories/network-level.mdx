@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+---
+
+import {
+    AdGuardLogo,
+    AdGuardHomeLogo,
+    PiHoleLogo,
+    RethinkDNSLogo,
+} from "@site/src/components/LogoProvider"
+
+# Network-Level Blockers
+
+Filtering happens at the network level and affects all devices connected to that network.
+**It's important to note that network-level blockers don't replace the system-level / browser extension
+ad blockers mentioned in previous chapters, but complement them.**
+At the network level, only "rough" filtering is possible, meaning various servers can be blocked, but just
+because you block the advertiser's server, the empty ad space will still remain on the website, which is an aesthetic issue;
+and the site can also detect that the ad didn't load,
+and may even ask you to disable the ad blocker.
+
+These problems can only be solved with fine, cosmetic filtering, so on devices - where possible -
+you should also install system-level or browser extension versions,
+which can perform these meticulous filtering tasks.
+
+List of network-level blockers (non-exhaustive):
+
+<ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard DNS](https://adguard-dns.io/en/welcome.html)</li>
+    <li><AdGuardHomeLogo /> [AdGuard Home](https://adguard.com/en/adguard-home/overview.html)</li>
+    <li><PiHoleLogo /> [Pi-hole](https://pi-hole.net/)</li>
+    <li><RethinkDNSLogo /> [RethinkDNS](https://rethinkdns.com/)</li>
+</ul>

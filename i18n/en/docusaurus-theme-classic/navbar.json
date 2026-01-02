@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "hufilter",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Hufilter Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.A hufilter projekt": {
+    "message": "About hufilter",
+    "description": "Navbar item with label A hufilter projekt"
+  },
+  "item.label.Szűrőlisták": {
+    "message": "Filter Lists",
+    "description": "Navbar item with label Szűrőlisták"
+  },
+  "item.label.Reklámblokkoló gyorstalpaló": {
+    "message": "Ad Blocker Guide",
+    "description": "Navbar item with label Reklámblokkoló gyorstalpaló"
+  },
+  "item.label.Szűrési irányelvek": {
+    "message": "Filtering Policy",
+    "description": "Navbar item with label Szűrési irányelvek"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

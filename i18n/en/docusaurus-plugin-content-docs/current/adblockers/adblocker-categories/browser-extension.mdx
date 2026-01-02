@@ -1,0 +1,76 @@
+---
+sidebar_position: 2
+---
+
+import {
+  ChromiumLogo,
+  FirefoxLogo,
+  AdGuardLogo,
+  UBlockOriginLogo,
+  AdBlockUltimateLogo,
+  AdblockPlusLogo,
+  AdBlockLogo,
+  FbContainerLogo,
+  BraveLogo,  
+} from "@site/src/components/LogoProvider"
+
+# Browser Extensions
+
+Filtering happens within the browser and is only valid for that browser. These solutions are free and work reliably, but they depend on the browser and are therefore at the mercy of the company developing that browser.
+This is primarily a problem with Google Chrome, as Manifest V3 will fundamentally change how ad blocker extensions work from June 2024
+([[source]](https://developer.chrome.com/blog/resuming-the-transition-to-mv3/#the-phase-out-timeline),
+[[source]](https://adguard.com/en/blog/chrome-manifest-v3-where-we-stand.html)).
+
+:::caution
+
+Don't use multiple ad blockers simultaneously (e.g., AdGuard with uBlock)!
+Contrary to popular belief, their effects don't add up, but rather the opposite happens:
+they may conflict with each other, which can hinder the operation of certain functions.
+However, you can safely combine a network-level blocker (e.g., AdGuard Home or Pi-hole) with a browser-based
+blocker (e.g., AdGuard or uBlock Origin).
+
+:::
+
+List of browser extensions (non-exhaustive):
+
+<ul style={{ listStyleType: "none" }}>
+  <li><ChromiumLogo /> For Chromium-based browsers (Google Chrome, Edge, Opera, Brave, etc.):</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=en)</li>
+    <li><UBlockOriginLogo /> [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)</li>
+    <li><AdBlockUltimateLogo /> [AdBlocker Ultimate](https://chrome.google.com/webstore/detail/adblocker-ultimate/ohahllgiabjaoigichmmfljhkcfikeof?hl=en)</li>
+    <li><AdblockPlusLogo /> [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=en)</li>
+    <li><AdBlockLogo /> [AdBlock](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom?hl=en)</li>
+  </ul>
+  
+  <li><FirefoxLogo /> For Firefox and Firefox-based browsers:</li>
+  <ul style={{ listStyleType: "none" }}>
+    <li><AdGuardLogo /> [AdGuard](https://addons.mozilla.org/en-US/firefox/addon/adguard-adblocker/)</li>
+    <li><UBlockOriginLogo /> [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)</li>
+    <li><AdBlockUltimateLogo /> [AdBlocker Ultimate](https://addons.mozilla.org/en-US/firefox/addon/adblocker-ultimate/)</li>
+    <li><AdblockPlusLogo /> [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/)</li>
+    <li><AdBlockLogo /> [AdBlock](https://addons.mozilla.org/en-US/firefox/addon/adblock-for-firefox/)</li>
+    <li><FbContainerLogo /> [Facebook Container](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/) - an extension developed by Mozilla that isolates Facebook in the browser, thereby hindering its tracking activities.</li>
+  </ul>
+</ul>
+
+:::tip
+
+It's worth using one of the following browsers, as they respect users' privacy and fully support ad blocking:
+
+<ul style={{ listStyleType: "none" }}>
+  <li><FirefoxLogo /> Firefox: https://www.mozilla.org/en-US/</li>
+  <ul>
+    <li>Firefox extensions are not affected by the Manifest V3 change, as they continue to allow
+      ad blockers to operate as before.
+      [[source](https://adguard.com/en/blog/firefox-manifestv3-chrome-adblocking.html)]</li>
+  </ul>
+
+  <li><BraveLogo /> Brave: https://brave.com/</li>
+  <ul>
+    <li>Brave comes with a built-in ad blocker by default, which won't be affected by the Manifest V3 change, as
+      it's not an extension but part of the browser.</li>
+  </ul>
+</ul>
+
+:::

@@ -1,44 +1,45 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faRocket, faUsers, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 type FeatureItem = {
-  title: string;
+  title: JSX.Element;
   icon: IconDefinition,
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Széles körű támogatás',
+    title: <Translate id="homepage.features.wideSupport.title">Széles körű támogatás</Translate>,
     icon: faRocket,
     description: (
-      <>
+      <Translate id="homepage.features.wideSupport.description">
         A hufiltert számos széles körben használt reklámblokkoló támogatja, beleértve az AdGuardot,
         az uBlock Origin-t, a Brave-t, az AdBlockot, az Adblock Plust és az AdBlocker Ultimate-t.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Nyílt forráskódú',
+    title: <Translate id="homepage.features.openSource.title">Nyílt forráskódú</Translate>,
     icon: faUsers,
     description: (
-      <>
+      <Translate id="homepage.features.openSource.description">
         A hufilter egy nonprofit, nyílt forráskódú projekt, amelynek fejlesztésében bárki
         egyszerűen részt vehet. A projekt a GitHubon található.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Testreszabható szűrés',
+    title: <Translate id="homepage.features.customizable.title">Testreszabható szűrés</Translate>,
     icon: faGear,
     description: (
-      <>
+      <Translate id="homepage.features.customizable.description">
         A hufilter számos szűrőlistát kínál, amelyek segítségével testreszabhatod a böngészési
         élményedet, és blokkolhatod a nem kívánt tartalmakat.
-      </>
+      </Translate>
     ),
   },
 ];

@@ -18,12 +18,31 @@ const config: Config = {
       onBrokenMarkdownLinks: 'warn',
     },
   },
-  // TODO: Add English translation
   i18n: {
     defaultLocale: 'hu',
-    locales: ['hu'],
+    locales: ['hu', 'en'],
+    localeConfigs: {
+      hu: {
+        label: 'Magyar',
+        direction: 'ltr',
+        htmlLang: 'hu',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en',
+      },
+    },
   },
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    () => ({
+      name: 'locale-redirect-plugin',
+      getClientModules() {
+        return ['./src/clientModules/localeRedirect.ts'];
+      },
+    }),
+  ],
   presets: [
     [
       'classic',
@@ -33,13 +52,7 @@ const config: Config = {
           editUrl:
             'https://github.com/hufilter/hufilter.github.io/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hufilter/hufilter.github.io/tree/main/',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -48,14 +61,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    announcementBar: {
-      id: 'notice',
-      content:
-        'A hufilter.hu tartalma kialakítás alatt van. Az oldal jelenleg tesztüzemben működik.',
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
-      isCloseable: true,
-    },
     image: 'img/social-card.png',
     navbar: {
       title: 'hufilter',
@@ -91,7 +96,6 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Wiki',
         // },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',
@@ -135,10 +139,6 @@ const config: Config = {
         {
           title: 'Egyéb',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/hufilter/hufilter',

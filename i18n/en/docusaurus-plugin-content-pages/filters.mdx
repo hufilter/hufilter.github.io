@@ -1,0 +1,91 @@
+---
+title: Filter Lists
+---
+
+# Filter Lists Provided by hufilter
+
+## Filter Lists Overview
+
+Hufilter provides lists for two main categories: full-level and network-level blocking.
+Full-level blocking not only prevents network requests (such as downloading ads), but also modifies the appearance and functionality of the website: it removes empty ad spaces, hides annoying elements, and can prevent certain scripts from running.
+In contrast, network-level blocking only filters at the server level, so advertising or tracking domains don't even reach the device, but empty spaces may remain on the website or the site may detect the blocking.
+When possible, it's recommended to use full-level lists.
+
+For more information, check out our [page introducing ad blockers](/docs/adblockers/about-adblockers).
+
+### For Full-Level Blocking
+
+:::note
+
+Many of hufilter's lists are supported as built-in language filters by the most popular ad blockers, which we've indicated in the table.
+
+:::
+
+| Format | Link | Blocked Elements | Compatible Programs |
+| --- | --- | --- | --- |
+| Adblock Plus | [hufilter.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter.txt) | ads | Adblock Plus (built-in filter), AdBlock (built-in filter), AdGuard, uBlock Origin, Brave, AdBlock Ultimate |
+| Adblock Plus | [hufilter-abp.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-abp.txt) | ads, trackers, annoying elements, adblock detection (limited), malware | Adblock Plus, AdBlock |
+| uBlock Origin | [hufilter-ublock.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-ublock.txt) | ads, trackers, annoying elements, adblock detection, malware | uBlock Origin (built-in filter), Brave (built-in filter) |
+| AdGuard | [hufilter-adguard.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt) | ads, trackers, annoying elements, adblock detection, malware | AdGuard (built-in filter), AdBlock Ultimate (built-in filter) |
+| Adblock Plus | [hufilter-selfpromo.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-selfpromo.txt) | self-promotions | Adblock Plus, AdBlock, AdGuard, uBlock Origin, Brave, AdBlock Ultimate |
+
+### For Network-Level Blocking
+
+:::note
+
+Network-level lists are automatically generated from the full-level lists.
+
+If you need a format different from those listed, open a GitHub issue, describe the details, and we'll consider adding the list.
+
+:::
+
+| Format | Link | Blocked Elements | Compatible Programs |
+| --- | --- | --- | --- |
+| Domain list | [hufilter-dns.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns.txt) (alias: [hufilter-pihole.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-pihole.txt)) | ads, trackers, annoying elements, malware | Pi-hole, Blocky (older than v0.23), Diversion (older than v5), OpenSnitch, PersonalBlocklist, pfBlockerNG, etc. |
+| Hosts file | [hufilter-hosts.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-hosts.txt) | ads, trackers, annoying elements, malware | AdAway, uMatrix, DNS66, NetGuard, Hostfile, Linux, etc. |
+| Adblock-style domain list | [hufilter-dns-adblock.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dns-adblock.txt) | ads, trackers, annoying elements, malware | AdGuard, AdGuard Home, eBlocker, Adblock Plus, AdBlock, uBlock Origin, Brave (aggressive mode only), AdBlock Ultimate, AdNauseam, Little Snitch Mini, etc. |
+| DNSMasq | [hufilter-dnsmasq.txt](https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-dnsmasq.txt) | ads, trackers, annoying elements, malware | DNSMasq (v2.86 or newer), adblock-lean, Diversion (v5 or newer), etc. |
+
+## Filter List Availability
+
+When a new rule is added to hufilter
+(i.e., [a commit arrives to the `hufilter/hufilter` repository](https://github.com/hufilter/hufilter/commits/master/)),
+the updated filter lists are automatically uploaded to the
+[`hufilter/hufilter` GitHub repository's `gh-pages` branch](https://github.com/hufilter/hufilter/tree/gh-pages),
+and from there to GitHub Pages.
+Due to the nature of this process, the lists are simultaneously accessible through multiple links.
+
+To avoid confusion, the links listed below **all serve the same content**,
+pointing to files on the `gh-pages` branch of the hufilter GitHub repository.
+jsDelivr is simply suitable for serving _any_ content hosted on GitHub,
+while the `filters.hufilter.hu` domain is connected to GitHub Pages, which is why it serves its content.
+
+For now, however, the jsDelivr links are the "official" list links, so we recommend using them,
+as we currently consider them the most stable.
+In the future, we plan to recommend the `filters.hufilter.hu` links as primary links,
+but even if that happens, it won't affect the operation of the other two links,
+**due to the way the list is published, all three links will always remain available and won't change.**
+
+:::note
+
+The current links have been in effect since late July 2024. For more information, visit the following GitHub issue:
+
+https://github.com/hufilter/hufilter/issues/461
+
+:::
+
+### jsDelivr CDN
+
+Link format: `https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/<filename>`
+
+Index page: https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/
+
+### hufilter.hu
+
+Link format: `https://filters.hufilter.hu/<filename>`
+
+Index page: https://filters.hufilter.hu/
+
+### GitHub
+
+Link format: `https://raw.githubusercontent.com/hufilter/hufilter/refs/heads/gh-pages/<filename>`

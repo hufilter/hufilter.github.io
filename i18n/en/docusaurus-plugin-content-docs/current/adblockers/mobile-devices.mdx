@@ -1,0 +1,50 @@
+---
+sidebar_position: 3
+---
+
+# Ad Blocking on Mobile Devices
+
+Ad blocking on mobile devices (phones, tablets) is not as straightforward as on desktop computers.
+Here are some useful tips to make ad blocking easier on mobile devices:
+
+## Tips for Ad Blocking on Mobile Devices
+
+- Use network-level and operating system-level blocking whenever possible.
+- Use Firefox, which supports extensions, so the add-ons listed in the previous chapter can be installed.
+- Use a browser that blocks ads by default, such as Brave or Opera.
+- Use a browser that supports content blockers, such as Edge or Samsung Internet. Content blockers are not as effective as full-fledged ad blockers.
+- Instead of stock apps, use alternatives that don't contain ads, such as [NewPipe](https://newpipe.net/) instead of YouTube.
+- Enable features through rooting that manufacturers don't allow, such as installing system-level certificates, removing stock apps, etc. However, rooting is only recommended for advanced users, as it may void the manufacturer's warranty and reduce security.
+
+## Ad-Free YouTube on Android
+
+For mobile devices, using a system-level ad blocker is not always sufficient, as blocking ads is not possible in all apps, typically including YouTube. The reason is that YouTube communicates over an encrypted (HTTPS, i.e., `https://`) channel and downloads ads through this as well. This encrypted communication would only become visible to the system-level blocker with certificate installation, but Google introduced "system-level" and "user-level" certificates starting with Android 7. Therefore, even if the system-level blocker installs a user-level certificate, it won't be able to see YouTube's traffic to filter out ads, as the YouTube app is configured to only trust system-level certificates.
+[[source](https://adguard.com/en/blog/android-nougat-release-and-what-does-it-mean-for-adguard-users.html)]
+
+Nevertheless, there are a few simple solutions to make YouTube ad-free on Android:
+
+1. Open YouTube in a browser capable of blocking ads, such as Firefox, Brave, Opera, etc.
+1. Replace the stock YouTube app with an app that doesn't contain ads. The following solutions are available on Android:
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/NewPipelogo.svg" width="14px" /> [NewPipe](https://newpipe.net/)
+     - Open-source YouTube client that doesn't use any Google APIs/services, respecting users' privacy.
+     - Since it's a completely separate app not connected to Google services, some YouTube app features are unavailable, such as login, commenting, subscribing, liking videos, etc. However, you can download videos, play in the background, etc.
+   - <img src="https://raw.githubusercontent.com/ReVanced/.github/main/profile/assets/revanced-logo/revanced-logo-round.svg" width="14px" /> [ReVanced](https://github.com/ReVanced/revanced-manager/releases)
+     - An open-source project created after YouTube Vanced's discontinuation that can modify YouTube and other apps' installation files (APK) using patches
+   - <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Youtubevanced.png" width="14px" /> [Vanced](https://github.com/YTVanced/VancedManager/releases)
+     - Modified version of the original YouTube app
+     - :warning: Project development **discontinued** in March 2022 under pressure from Google
+       [[source](https://www.theverge.com/2022/3/13/22975890/youtube-vanced-app-discontinued-shutting-down-legal-reasons)]
+
+:::caution
+
+Download ReVanced **ONLY** from the official https://github.com/ReVanced or https://revanced.app/download pages
+and create the patches yourself using ReVanced Manager.
+The Manager will need a stock APK file to patch, which you can obtain from
+https://www.apkmirror.com/apk/google-inc/youtube/.
+Many sites offer ReVanced as easily downloadable APK files, but these are not official sources, and it's easy for malicious code to be hidden in such files.
+
+:::
+
+## Ad-Free YouTube on TV
+
+[SmartTube](https://github.com/yuliskov/SmartTube) may work on certain TV devices (Android TV, Amazon Fire TV).
